@@ -19,13 +19,24 @@ var residents = [
 ];
 
 /* GET home page. */
-router.get('/hang', function(req, res, next) {
-  res.json(residents);
+// router.get('/hang', function(req, res, next) {
+//   res.json(residents);
+// });
+
+// router.get("/hang/:name", function (req, res) {
+//   console.log("Route param function is running")
+//   res.send( "My name is " + req.params.name );
+// });
+
+router.get("/api/hang", function (req, res) {
+  console.log("Query function is running")
+  var query = req.query;
+    
+
+  res.json(query);
 });
 
-router.get("/hang/:name", function (req, res) {
-  res.send( "My name is " + req.params.name );
-});
+
 
 
 module.exports = router;

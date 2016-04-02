@@ -175,20 +175,20 @@ $("#program-search").submit(function(event) {
         }
     });
 
-	$.ajax({
-        // url: "https://amioff.work/api/swap?programName=$programName%20time:unixtime",
-        url: "/api/swap?programName=$programName"+"&"+"startTime="+unixtime+"&"+"endTime="+(unixtime+1000)+"&"+"staffType="+"UCSF EM R2",
-        type: "GET",
-        success: function(data) {
-            // console.log(data);
+	// $.ajax({
+ //        // url: "https://amioff.work/api/swap?programName=$programName%20time:unixtime",
+ //        url: "/api/swap?programName=$programName"+"&"+"startTime="+unixtime+"&"+"endTime="+(unixtime+1000)+"&"+"staffType="+"UCSF EM R2",
+ //        type: "GET",
+ //        success: function(data) {
+ //            // console.log(data);
 
 
 
-        },
-        error: function() {
-        	alert("Error!");
-        }
-    });
+ //        },
+ //        error: function() {
+ //        	alert("Error!");
+ //        }
+ //    });
 
 
 
