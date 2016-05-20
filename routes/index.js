@@ -35,15 +35,12 @@ router.get("/api/hang", function (req, res) {
     
     timesheet.requestTimesheet(
 	"UCSFEM",
-	5,
+	3,
 	2015,
 	function(body) {
-	    console.log("******************************");
-	    console.log(timesheet.parseToJson(timesheet.attachHeadersToTimesheet(timesheet.cleanTimesheet(body))));
-	    console.log("******************************");
-	    console.log("WE MADE IT")
+	    res.json(timesheet.parseToJson(timesheet.attachHeadersToTimesheet(timesheet.cleanTimesheet(body))));
+	    console.log("Handled query for query req");
 	});
-  res.json(query);
 });
 
 
