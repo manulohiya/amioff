@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var timesheet = require('../lib/amionService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -32,11 +33,9 @@ router.get("/api/hang", function (req, res) {
   console.log("Query function is running")
   var query = req.query;
     
-
+    timesheet.requestTimesheet("UCSFEM", 5, 2015, function(body) {console.log("WE MADE IT")});
   res.json(query);
 });
-
-
 
 
 module.exports = router;
