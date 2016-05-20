@@ -33,7 +33,16 @@ router.get("/api/hang", function (req, res) {
   console.log("Query function is running")
   var query = req.query;
     
-    timesheet.requestTimesheet("UCSFEM", 5, 2015, function(body) {console.log("WE MADE IT")});
+    timesheet.requestTimesheet(
+	"UCSFEM",
+	5,
+	2015,
+	function(body) {
+	    console.log("******************************");
+	    console.log(timesheet.cleanTimesheet(body));
+	    console.log("******************************");
+	    console.log("WE MADE IT")
+	});
   res.json(query);
 });
 
